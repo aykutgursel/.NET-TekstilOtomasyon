@@ -1,0 +1,130 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="AdminPanel_AdminMaster" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="stil_yonetim.css" type="text/css" rel="stylesheet" />
+    <style>
+        
+        input[type=text] {
+            display: inline-block;
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+            margin: 3px;
+            padding: 10px 20px;
+            border: 1px solid #000000;
+            -webkit-border-radius: 20px;
+            border-radius: 20px;
+            font: normal normal bold 12px/normal Arial, Helvetica, sans-serif;
+            color: rgba(0,142,198,1);
+            -o-text-overflow: clip;
+            text-overflow: clip;
+            background: rgba(247,222,222,1);
+            -webkit-transform: rotateX(12.032113697747288deg) rotateY(-0.5729577951308232deg);
+            transform: rotateX(12.032113697747288deg) rotateY(-0.5729577951308232deg);
+        }
+
+        input[type=submit] {
+            display: inline-block;
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+            height: 20px;
+            cursor: pointer;
+            margin: 2px 0 2px 2px;
+            padding: 10px 20px;
+            border: 2px solid #757575;
+            -webkit-border-radius: 16px;
+            border-radius: 16px;
+            font: normal 16px/normal "Times New Roman", Times, serif;
+            color: rgba(255,255,255,0.9);
+            -o-text-overflow: clip;
+            text-overflow: clip;
+            letter-spacing: 4px;
+            background: #4c90aa;
+            -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2);
+            box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2);
+            text-shadow: -1px -1px 0 rgba(173,46,46,0.66);
+            -webkit-transition: color 301ms cubic-bezier(0.95, 0.05, 0.375, 0.64);
+            -moz-transition: color 301ms cubic-bezier(0.95, 0.05, 0.375, 0.64);
+            -o-transition: color 301ms cubic-bezier(0.95, 0.05, 0.375, 0.64);
+            transition: color 301ms cubic-bezier(0.95, 0.05, 0.375, 0.64);
+        }
+
+        .auto-style1 {
+            width: 100%;
+            height: 30px;
+        }
+
+        .auto-style2 {
+            width: 213px;
+        }
+        .auto-style3 {
+            width: 638px;
+        }
+        .kBilgileri{width:20%}
+        .gBilgileri{width:50%}
+        .sBilgieri {
+            width: 20%;
+        }
+
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+ 
+<div id="dis_alan">
+    
+    <div id="banner"><asp:Label ID="Label1" runat="server" Text="Erkanlar Tekstil" ForeColor="#FF9900" Font-Bold="True" Font-Names="Charlemagne Std" Font-Size="15pt"></asp:Label> <asp:Label ID="Label2" runat="server" Text="Yönetim Paneli" ForeColor="White" Font-Bold="True" Font-Names="Charlemagne Std" Font-Size="15pt"></asp:Label></div>
+
+
+      <div id="navigasyon" style="border:1px solid black">
+          <table class="auto-style1">
+                <tr>
+                    <td class="kBilgileri"><div class="Gorev">Kullanıcı Adı : <asp:Label ID="lblAdSoyad" runat="server" Text=""></asp:Label></div></td>
+                    <td class="gBilgileri"><div class="Gorev">Görevi : <asp:Label ID="lblGorevi" runat="server" Text=""></asp:Label></div></td>
+                    <td class="sBilgileri"><asp:LinkButton ID="lnkSiteyeGit" runat="server" OnClick="lnkSiteyeGit_Click" Font-Bold="True" Font-Underline="False" ForeColor="#660033">Siteye Git</asp:LinkButton></td>
+                    <td style="width:10%"><asp:LinkButton ID="lnkBtnCikisYap" runat="server" OnClick="lnkBtnCikisYap_Click" Font-Bold="True" Font-Underline="False" ForeColor="#CC0000">Çıkış Yap</asp:LinkButton></td>
+                 </tr>
+            </table>
+    </div>
+
+ <div style="width:100%">
+  <div id="icerik_alani">
+   	    <div id="butonlar">
+   	      <ul>
+                   <li><a href="GrupYonetimi.aspx">Grup Yönetimi</a></li>
+                   <li><a href="AdminYonetimi.aspx">Admin Yönetimi</a></li>
+                   <li><a href="AdminIletisim.aspx">İletişim Bilgilerim</a></li>
+                   <li><a href="adminHakkimizda.aspx">Hakkımızda</a></li>
+                  <li><a href="EnCokSatilanUrunler.aspx">En çok Satılan Ürünler</a></li>
+                   <li><a href="AnasayfaDuzenle.aspx">Anasayfa Duzenle</a></li>
+                  <li><a href="metinEditoru.aspx">Metin Editörü</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="icerik">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+      
+
+        </asp:ContentPlaceHolder>
+    </div>
+ </div>
+
+</div>
+
+
+
+
+    </form>
+</body>
+</html>
